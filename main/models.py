@@ -27,6 +27,7 @@ class Celestial(models.Model):
     discount = models.DecimalField(max_digits=4, default=0.00, decimal_places=2)
     created =  models.TimeField(auto_now_add=True)
     updated = models.TimeField(auto_now=False)
+    image = models.ImageField(upload_to='celestial/%Y/%m/%d', blank=True)
 
     class Meta:
         ordering = ['name']
@@ -46,7 +47,7 @@ class Celestial(models.Model):
 
 
 class ImageCelestial(models.Model):
-    celestial = models.ForeignKey(Celestial, verbose_name='image', on_delete=models.PROTECT)
+    celestial = models.ForeignKey(Celestial, verbose_name='images', on_delete=models.PROTECT)
     image = models.ImageField(upload_to='celestial/%Y/%m/%d')
     
     def __str__(self):
