@@ -34,7 +34,7 @@ Celestial shop
                     {% for celestial_obj in celestial_objs %}
                         <div class="item">
                             <a href="{{ celestial_obj.get_absolute_url}}" class="index-card d-flex flex-column align-items-center text-center">
-                                <img src="#" class="card-img" alt="">
+                                <img src="{{ celestial_obj.image.url }}" class="card-img" alt="">
                                 <h5 class="title-card">{{ celestial_obj.name }}</h5>
                                 {% if product.discount %}
                                     <div class="cart-discount d-flex gap-2">

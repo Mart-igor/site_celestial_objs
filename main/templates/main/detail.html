@@ -7,7 +7,7 @@
 {% block content %}
     <div class="detail d-flex">
         <div class="detail-img">
-            {% for image in celestial_obj.image.all() %}
+            {% for image in celestial_obj.image.all %}
                 <img src="{{ image.image.url }}" class="detail-image" alt="" style="display: none;" data-index="{{ forloop.counter0 }}">
             {% endfor %}
             <div class="image-nav">
