@@ -47,9 +47,9 @@ class Celestial(models.Model):
 
 
 class ImageCelestial(models.Model):
-    celestial = models.ForeignKey(Celestial, verbose_name='images', on_delete=models.PROTECT)
-    image = models.ImageField(upload_to='celestial/%Y/%m/%d')
+    celestial_obj = models.ForeignKey(Celestial, related_name='images', on_delete=models.PROTECT)
+    image = models.ImageField(upload_to='celestial/%Y/%m/%d', blank=True)
     
     def __str__(self):
-        return f'{self.product.name} - {self.image.name}'
+        return f'{self.celestial_obj.name} - {self.image.name}'
     

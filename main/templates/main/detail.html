@@ -6,8 +6,9 @@
 
 {% block content %}
     <div class="detail d-flex">
-        <div class="detail-img">
-            {% for image in celestial_obj.image.all %}
+        <div class="detail-img d-flex">
+            
+            {% for image in celestial_obj.images.all %}
                 <img src="{{ image.image.url }}" class="detail-image" alt="" style="display: none;" data-index="{{ forloop.counter0 }}">
             {% endfor %}
             <div class="image-nav">
@@ -43,8 +44,8 @@
         <div class="detail-card">
             <h2>{{ celestial_obj.name }}</h2>
             <h3>Category: {{ celestial_obj.category }}</h3>
-            <p>{{ celestial_obj.description|linebreaks}}</p>
-            {% if celesta.discount %}
+            <p class='detail-p'>{{ celestial_obj.description|linebreaks }}</p>
+            {% if celestial_obj.discount %}
                 <div class="card-discount d-flex gap-2">
                     <p class="line">&#8383; {{ celestial_obj.price }}</p>
                     <p class="price">&#8383; {{ celestial_obj.cell_price }}</p>
