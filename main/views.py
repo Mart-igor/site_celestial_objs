@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Category, Celestial
 from django.core.paginator import Paginator
+from cart.forms import CartAddCelestialForm
 
 # Create your views here.
 
@@ -25,4 +26,6 @@ def category_list(request, category_slug=None):
 
 def detail(request, detail_slug):
     celestial_obj = get_object_or_404(Celestial, slug=detail_slug)
-    return render(request, 'main/detail.html', context={'celestial_obj': celestial_obj})
+    cart_celestial_form = CartAddCelestialForm
+    return render(request, 'main/detail.html', context={'celestial_obj': celestial_obj,
+                                                        'cart_celestial_form': cart_celestial_form})
