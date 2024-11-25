@@ -49,6 +49,20 @@ h5 {
     font-weight: 600;
 }
 
+form select {
+    background-color: #fff;
+    border: none;
+}
+
+form select:focus {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+input:focus {
+    box-shadow: none;
+}
+
 .header {
     height: 80px;
     background-color: #000;
@@ -305,9 +319,9 @@ ul.social-icons a:hover {
 }
 
 .selected {
-    border: 1px solid #000;
+    border: 1px solid #fff;
     border-radius: 5px;
-    background-image: url(../img/categories-gtn.png);
+    background-color: transparent;
 }
 
 .main {
@@ -356,6 +370,125 @@ ul.social-icons a:hover {
     opacity: 0.2;
 }
 
+/* login.html */
+
+.container-login {
+    padding-left: 36%;
+}
+
+.login {
+    
+    width: 400px;
+    height: 600px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.login-title h2 {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.login-btn {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+    border: 1px solid #000000;
+}
+
+.reset-pass {
+    font-size: 20px;
+}
+
+/* registration.html */
+.container-registration {
+    padding-left: 30%;
+}
+
+.login-reg {
+    width: 600px;
+    height: 600px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.row {
+    margin: 10px;
+}
+
+.login-title h2 {
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.login-btn {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    padding-left: 10px;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+    border: 1px solid #000000;
+}
+
+/* profile.html */
+.windowp {
+    width: 1210px;
+    height: 600px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.box2 {
+    margin-top: 212px;
+    margin-left: 20px;
+}
+
+.profile-btn {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 0;
+    transition: all 0.5s ease;
+    background-color: transparent;
+}
+
+.profile-btn:hover {
+    border: 1px solid #000000;
+}
 
 /* Styles specific to the space section */
 .space {

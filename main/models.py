@@ -47,7 +47,7 @@ class Celestial(models.Model):
 
 
 class ImageCelestial(models.Model):
-    celestial_obj = models.ForeignKey(Celestial, related_name='images', on_delete=models.PROTECT)
+    celestial_obj = models.ForeignKey(Celestial, related_name='images', on_delete=models.PROTECT, null=True)
     image = models.ImageField(upload_to='celestial/%Y/%m/%d', blank=True)
     
     def __str__(self):
