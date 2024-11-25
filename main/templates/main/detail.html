@@ -53,6 +53,13 @@
             {% else %}
                 <p class="price">&#8383; {{ celestial_obj.price }}</p>
             {% endif %}
+            <form action="{% url "cart:cart_add" celestial_obj.id %}" class="qform" method="post">
+                <div class="cart-form">
+                    {{ cart_celestial_form }}
+                    {% csrf_token %}
+                </div>
+                <input type="submit" class="add-to-cart-btn" value="Add to cart">
+            </form>
         </div>
     </div>
 {% endblock content %}
