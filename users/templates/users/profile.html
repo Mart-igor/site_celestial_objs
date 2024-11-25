@@ -4,7 +4,7 @@
 {% block title %}Profile{% endblock title %}
 
 {% block content %}
-    <div class="d-flex">
+    <div class="container-profile">
         <div class="windowp d-flex p-4 mb-4 mx-2 rounded">
             <form action="{% url "users:profile" %}" method="post" enctype="multipart/form-data">
                 <h2 class="mb-2">Profile</h2>
@@ -58,5 +58,6 @@
             </form>
             
         </div>
+    </div>
 {% endblock content %}
 
